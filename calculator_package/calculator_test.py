@@ -11,4 +11,4 @@ class TestCalculator(TestCase):
 
         sum_result = sum_two_numbers(number_one, number_two)
 
-        self.assertEqual(3, sum_result)
+        self.assertEqual(2, sum_result)
