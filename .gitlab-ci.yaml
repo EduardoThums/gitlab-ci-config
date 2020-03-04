@@ -1,0 +1,17 @@
+image: "python:alpine"
+
+stages: 
+    - build
+    - test
+
+building:
+    stage: build
+    script:
+        - apk update && apk add python3-pip && pip install -r requirements.txt
+            
+
+testing:
+    stage: test
+    script:
+        - python -m unittest discover -p '*_test.py'
+
